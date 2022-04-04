@@ -2,28 +2,26 @@
 
 # Created by: Jackson Naufal
 # Created on: March 2022
-# This is a guess the random number program
+# This is a greater than less than
 
 import random
 
 
 def main():
 
-    # This is a random number guesser, with try and catch
+    # This is a greater than less than, with try and catch
 
     # input
-    guess_number_string = input("Enter your first guess here (0-9): ")
-    random_Number = random.randint(0, 9)  # a number between 0 and 9
+    age = input("Enter your age here! : ")
 
     # process & output
     try:
-        guess_Number = int(guess_number_string)
+        age_number_string = int(age)
 
-        if guess_Number == random_Number:
-            print("\nGuess is correct!")
+        if age_number_string >= 25 and age_number_string <= 40:
+            print("\nYou're a good age!")
         else:
-            print("You guessed incorrectly")
-            print("\nThe correct number is {0}.".format(random_Number))
+            print("\nYou're not a good age!")
 
     except Exception:
         print("\nThat was not an integer")
